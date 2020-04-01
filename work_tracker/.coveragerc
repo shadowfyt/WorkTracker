@@ -1,0 +1,3 @@
+[run]
+source = work_tracker
+omit = work_tracker/test*

@@ -1,0 +1,31 @@
+<div metal:use-macro="load: ../shared/layout.pt">
+    <div metal:fill-slot="content">
+
+        <div class="content">
+            <div class="main-content">
+                <div class="header">
+                    <h2><strong>Add New Expense</strong></h2>
+                </div>
+
+                <div class="main">
+                    <form action="POST">
+                        <input type="text" placeholder="Store" name="store"/>
+                        <input type="text" placeholder="Descrpiton" name="descrpiton"/>
+                        <input type="text" placeholder="Cost" name="Cost"/>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                    <h3>Add mileage</h3>
+                    <form action="POST">
+                        <input type="text" placeholder="From" name="from"/>
+                        <input type="text" placeholder="To" name="to"/>
+                        <input type="text" placeholder="Miles" name="miles"/>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>

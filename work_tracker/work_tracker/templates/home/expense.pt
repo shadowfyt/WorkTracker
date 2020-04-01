@@ -1,0 +1,6 @@
+<div metal:use-macro="load: ../shared/layout.pt">
+    <div metal:fill-slot="content">
+
+
+    </div>
+</div>

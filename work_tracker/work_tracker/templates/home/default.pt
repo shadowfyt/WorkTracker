@@ -4,7 +4,7 @@
         <div class="content">
             <div class="main-content">
                 <div class="header">
-                    <h2><strong>Add New Expense</strong></h2>
+                    <h2><strong>Add New Expense: ${user.name.title()}</strong></h2>
                 </div>
 
                 <div class="main">

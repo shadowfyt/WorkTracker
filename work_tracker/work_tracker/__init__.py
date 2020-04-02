@@ -3,6 +3,7 @@ import os
 from pyramid.config import Configurator
 
 from work_tracker.data.db_session import DbSession
+from work_tracker.data.repository import load_starter_data
 
 
 
@@ -25,3 +26,4 @@ def init_db():
         'work_tracker.sqlite'
     )
     DbSession.global_init(db_file)
+    load_starter_data()

@@ -1,6 +1,13 @@
 <div metal:use-macro="load: ../shared/layout.pt">
     <div metal:fill-slot="content">
-
-
+        <h1>TEST PAGE!</h1>
+        <div>
+            <form action="" method="POST">
+                <input type="text" placeholder="Store" name="store"/>
+                <input type="text" placeholder="Descrpiton" name="des"/>
+                <input type="text" placeholder="Cost" name="cost"/>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
     </div>
 </div>

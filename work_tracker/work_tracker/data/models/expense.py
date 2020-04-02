@@ -1,7 +1,7 @@
 import datetime
 import sqlalchemy
 from sqlalchemy import orm
-from billtracker.data.modelbase import SqlAlchemyBase
+from work_tracker.data.modelbase import SqlAlchemyBase
 
 class Expense(SqlAlchemyBase):
     __tablename__="expenses"
@@ -10,4 +10,8 @@ class Expense(SqlAlchemyBase):
     created_date = sqlalchemy.Column(sqlalchemy.DateTime, default=datetime.datetime.now, index=True)
     store_name = sqlalchemy.Column(sqlalchemy.String, index=True)
     cost = sqlalchemy.Column(sqlalchemy.Float, default=0, index=True)
-    desc = sqlalchemy.Column(sqlalchemy.String, index=True)
+    des = sqlalchemy.Column(sqlalchemy.String, index=True)
+
+    user_id = sqlalchemy.Column(sqlalchemy.Integer, sqlalchemy.ForeignKey('users.id'))
+    user = orm.relation('User', back_populates='expenses')
+
